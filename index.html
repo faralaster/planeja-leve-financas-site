@@ -3,49 +3,211 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Planeja Leve Finanças</title>
-    <meta name="description" content="Planners e ferramentas práticas para controle de gastos, orçamento, dívidas e metas de economia.">
-    <meta property="og:title" content="Planeja Leve Finanças">
-    <meta property="og:description" content="Organização financeira sem julgamento, um passo de cada vez.">
+    <title>Diário Financeiro Kakeibo — o método japonês de 30 dias | Planeja Leve Finanças</title>
+    <meta name="description" content="Kakeibo: o método japonês de 30 dias pra sair do piloto automático financeiro. Sem conectar sua conta bancária a nada. Por R$ 9,90.">
+    <meta property="og:title" content="Diário Financeiro Kakeibo — Planeja Leve Finanças">
+    <meta property="og:description" content="Kakeibo: o método japonês de 30 dias pra sair do piloto automático financeiro. Sem conectar sua conta bancária a nada.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://planejaleve.netlify.app/">
     <meta property="og:image" content="https://planejaleve.netlify.app/og.png">
     <link rel="canonical" href="https://planejaleve.netlify.app/">
     <link rel="icon" href="/planeja-leve.png">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/kakeibo.css">
   </head>
   <body>
-    <main>
-      <nav class="nav" aria-label="Navegação principal">
-        <a class="brand" href="/">
-          <span class="brand-mark" aria-hidden="true">PL</span>
-          <span>Planeja Leve Finanças</span>
-        </a>
-        <a class="nav-link" href="/politica-de-privacidade/">Privacidade</a>
-      </nav>
+    <main class="kakeibo">
 
-      <section class="hero">
-        <div class="eyebrow">Organização financeira sem julgamento</div>
-        <h1>Planejar pode ser mais leve.</h1>
-        <p class="hero-copy">Planners e ferramentas práticas para organizar gastos, criar um orçamento possível, acompanhar dívidas e transformar metas de economia em pequenos passos.</p>
-        <div class="actions">
-          <a class="primary-button" href="https://br.pinterest.com/planejalevefinancas/" target="_blank" rel="noreferrer">Ver perfil no Pinterest</a>
-          <a class="secondary-button" href="/politica-de-privacidade/">Como cuidamos dos dados</a>
+      <!-- 1. HERO -->
+      <header class="hero" id="topo">
+        <div class="wrap">
+          <p class="eyebrow">Método Kakeibo · desde 1904</p>
+          <h1>Kakeibo: o método japonês de 30 dias pra sair do piloto automático financeiro</h1>
+          <p class="subhead">Sem conectar sua conta bancária a nada. Sem mais um app pra abandonar em uma semana.</p>
+          <a class="cta-button" href="#oferta">Quero organizar minhas finanças</a>
+
+          <!-- IMAGEM: capa do Diário Financeiro Kakeibo -->
+          <figure class="hero-image">
+            <div class="img-slot img-slot--cover" role="img" aria-label="Capa do Diário Financeiro Kakeibo — imagem a ser adicionada">
+              <span>Capa do Diário Financeiro Kakeibo</span>
+            </div>
+          </figure>
+        </div>
+      </header>
+
+      <!-- 2. RECONHECIMENTO DA DOR -->
+      <section class="dor" aria-label="Você se identifica?">
+        <div class="wrap">
+          <h2>Já parou pra pensar...</h2>
+          <ul class="dor-list">
+            <li>Já perdeu as contas de quanto gastou esse mês?</li>
+            <li>Sente que o dinheiro "some" antes de você perceber?</li>
+            <li>Já baixou um app de finanças e desinstalou na primeira semana?</li>
+            <li>Sente um aperto só de pensar em abrir o extrato do cartão?</li>
+          </ul>
+          <p class="dor-fechamento">Isso não é falta de força de vontade. É falta da ferramenta certa — uma que não exige que você vire especialista em planilha.</p>
         </div>
       </section>
 
-      <section class="feature-grid" aria-label="O que você encontra">
-        <article class="feature"><span class="feature-number">01</span><h2>Controle de gastos</h2><p>Modelos simples para entender para onde o dinheiro está indo.</p></article>
-        <article class="feature"><span class="feature-number">02</span><h2>Metas possíveis</h2><p>Passos visuais para economizar, sair das dívidas e ganhar fôlego.</p></article>
-        <article class="feature"><span class="feature-number">03</span><h2>Rotina organizada</h2><p>Conteúdo acolhedor para cuidar das finanças no seu ritmo.</p></article>
+      <!-- 3. AGITAÇÃO -->
+      <section class="agitacao">
+        <div class="wrap">
+          <p>Não é sobre ganhar mais. É sobre enxergar com clareza — porque toda meta que você adia (a viagem, a reserva de emergência, sair do vermelho) começa exatamente aqui: sabendo pra onde o dinheiro está indo.</p>
+        </div>
       </section>
 
-      <section class="api-note">
-        <div><span class="section-label">Integração responsável</span><h2>Sobre nosso uso da API do Pinterest</h2></div>
-        <p>A integração é de uso interno da própria Planeja Leve Finanças. Ela auxilia na criação e programação de conteúdo selecionado pelo titular, além da organização dos próprios Pins e pastas. Nenhuma ação é realizada em contas de terceiros.</p>
+      <!-- 4. SOLUÇÃO -->
+      <section class="solucao" id="metodo">
+        <div class="wrap">
+          <span class="section-label">O método</span>
+          <h2>O Diário Financeiro Kakeibo não é um app</h2>
+          <p>Não pede seus dados bancários e não exige que você entenda de finanças. É um método japonês com mais de 100 anos que te mostra, com clareza, pra onde seu dinheiro está indo — pra você decidir o que fazer com essa informação, no seu tempo.</p>
+
+          <!-- IMAGENS: 2-3 páginas reais do produto -->
+          <div class="preview-grid">
+            <div class="img-slot img-slot--wide" role="img" aria-label="Página interna: guia do método — imagem a ser adicionada"><span>Página interna 1</span></div>
+            <div class="img-slot img-slot--wide" role="img" aria-label="Página interna: ficha de planejamento mensal — imagem a ser adicionada"><span>Página interna 2</span></div>
+            <div class="img-slot img-slot--wide" role="img" aria-label="Página interna: registro diário — imagem a ser adicionada"><span>Página interna 3</span></div>
+          </div>
+        </div>
       </section>
 
-      <footer><span>© 2026 Planeja Leve Finanças</span><span>Conteúdo educativo — não constitui aconselhamento financeiro.</span></footer>
+      <!-- 5. O QUE ESTÁ INCLUSO -->
+      <section class="oferta" id="oferta">
+        <div class="wrap">
+          <span class="section-label">A oferta</span>
+          <h2>Tudo isso por R$ 9,90</h2>
+
+          <ul class="incluso-list">
+            <li class="incluso-item">
+              <span class="check" aria-hidden="true">✓</span>
+              <div class="img-slot img-slot--square" role="img" aria-label="Capa: Diário Financeiro Kakeibo — imagem a ser adicionada"><span>Capa</span></div>
+              <p>Diário Financeiro Kakeibo completo (guia do método + fichas de planejamento mensal, registro diário e resumo mensal)</p>
+            </li>
+            <li class="incluso-item">
+              <span class="check" aria-hidden="true">✓</span>
+              <div class="img-slot img-slot--square" role="img" aria-label="Ícone versão impressa e digital — imagem a ser adicionada"><span>Formatos</span></div>
+              <p>Versão para imprimir <strong>e</strong> versão digital preenchível</p>
+            </li>
+            <li class="incluso-item">
+              <span class="check" aria-hidden="true">✓</span>
+              <div class="img-slot img-slot--square" role="img" aria-label="Capa: Raio-X dos Gastos Invisíveis — imagem a ser adicionada"><span>Capa bônus 1</span></div>
+              <p><strong>Bônus grátis:</strong> Raio-X dos Gastos Invisíveis — checklist e ficha para identificar vazamentos financeiros invisíveis</p>
+            </li>
+            <li class="incluso-item">
+              <span class="check" aria-hidden="true">✓</span>
+              <div class="img-slot img-slot--square" role="img" aria-label="Capa: Desafio de 30 Dias para Economizar — imagem a ser adicionada"><span>Capa bônus 2</span></div>
+              <p><strong>Bônus grátis:</strong> Desafio de 30 Dias para Economizar — meta em percentual, adaptável a qualquer renda, com calendário de hábitos</p>
+            </li>
+            <li class="incluso-item">
+              <span class="check" aria-hidden="true">✓</span>
+              <div class="img-slot img-slot--square" role="img" aria-label="Ícone bônus em dois formatos — imagem a ser adicionada"><span>Formatos</span></div>
+              <p>Os dois bônus também em 2 formatos (para imprimir e digital)</p>
+            </li>
+          </ul>
+
+          <div class="preco-box">
+            <p class="preco">R$ 9,90 <span>pagamento único, sem mensalidade</span></p>
+            <!-- TODO: substituir href pelo link de checkout do Kirvano assim que for enviado -->
+            <a id="cta-oferta" class="cta-button buy-button" href="#" data-checkout-placeholder="kirvano">Quero meu Diário Kakeibo</a>
+            <p class="microcopy">Acesso imediato após a confirmação do pagamento.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CAPTURA DE EMAIL -->
+      <section class="captura-email">
+        <div class="wrap">
+          <h2>Ainda não decidiu?</h2>
+          <p>Quer receber novidades e conteúdo extra sobre organização financeira? Deixe seu email.</p>
+          <form name="newsletter-kakeibo" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="newsletter-kakeibo">
+            <p class="hp-field"><label>Não preencha este campo: <input name="bot-field"></label></p>
+            <div class="email-row">
+              <label class="visually-hidden" for="email-newsletter">Seu e-mail</label>
+              <input type="email" id="email-newsletter" name="email" placeholder="seu@email.com" required>
+              <button type="submit">Quero receber</button>
+            </div>
+            <label class="consent">
+              <input type="checkbox" name="consentimento" required>
+              <span>Concordo em receber e-mails da Planeja Leve Finanças e li a <a href="/politica-de-privacidade/">Política de Privacidade</a>.</span>
+            </label>
+          </form>
+        </div>
+      </section>
+
+      <!-- 6. PROVA SOCIAL / CONFIANÇA -->
+      <section class="confianca">
+        <div class="wrap">
+          <div class="badges">
+            <span class="badge">🔒 Compra segura</span>
+            <span class="badge">✅ Pagamento processado com segurança</span>
+          </div>
+          <p class="transparencia">O Kakeibo não foi inventado pela Planeja Leve Finanças — é um método japonês centenário, criado em 1904 por Hani Motoko. Nós organizamos o método em um material prático, em português, pra você aplicar sem complicação.</p>
+        </div>
+      </section>
+
+      <!-- 7. GARANTIA -->
+      <section class="garantia">
+        <div class="wrap">
+          <h2>Garantia de 7 dias</h2>
+          <p>Se não fizer sentido pra você, devolvemos seu dinheiro, sem perguntas.</p>
+          <p class="legal">Compras online no Brasil têm direito de arrependimento em até 7 dias corridos após a confirmação, conforme o art. 49 do Código de Defesa do Consumidor (Lei nº 8.078/1990).</p>
+        </div>
+      </section>
+
+      <!-- 8. FAQ -->
+      <section class="faq" id="faq">
+        <div class="wrap">
+          <h2>Perguntas frequentes</h2>
+
+          <details>
+            <summary>Preciso entender de finanças pra usar?</summary>
+            <p>Não. O material foi feito justamente pra quem nunca organizou nada antes — sem termos técnicos, sem fórmula.</p>
+          </details>
+
+          <details>
+            <summary>Por que não usar um app de graça?</summary>
+            <p>Não é sobre ter o app mais completo — é sobre finalmente começar, sem complicação, sem conectar sua conta bancária a nada, sem mais uma senha pra lembrar. Você escreve, vê pra onde seu dinheiro vai, e ajusta.</p>
+          </details>
+
+          <details>
+            <summary>Funciona no celular ou só impresso?</summary>
+            <p>Os dois — você recebe a versão pra imprimir e a versão digital preenchível, pra usar direto no celular ou tablet.</p>
+          </details>
+
+          <details>
+            <summary>Recebo na hora?</summary>
+            <p>Sim, acesso imediato após a confirmação do pagamento.</p>
+          </details>
+
+          <details>
+            <summary>E se eu não gostar?</summary>
+            <p>Você tem 7 dias de garantia — se não fizer sentido pra você, devolvemos seu dinheiro, sem perguntas.</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- 9. CTA FINAL -->
+      <section class="cta-final">
+        <div class="wrap">
+          <h2>Kakeibo: seu primeiro passo pra sair do piloto automático financeiro</h2>
+          <!-- TODO: substituir href pelo link de checkout do Kirvano assim que for enviado -->
+          <a id="cta-final" class="cta-button buy-button" href="#" data-checkout-placeholder="kirvano">Quero meu Diário Kakeibo por R$ 9,90</a>
+        </div>
+      </section>
+
+      <!-- 10. RODAPÉ -->
+      <footer class="rodape-kakeibo">
+        <div class="wrap-wide">
+          <span>Planeja Leve Finanças</span>
+          <a href="/politica-de-privacidade/">Política de Privacidade</a>
+          <a href="https://br.pinterest.com/planejalevefinancas/" target="_blank" rel="noreferrer">Fale conosco no Pinterest</a>
+        </div>
+      </footer>
+
     </main>
   </body>
 </html>
