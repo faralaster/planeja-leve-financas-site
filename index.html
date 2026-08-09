@@ -17,6 +17,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,680&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   </head>
   <body>
+    <form name="newsletter" data-netlify="true" netlify-honeypot="empresa" hidden>
+      <input type="email" name="email" />
+      <input type="checkbox" name="consentimento" />
+      <input name="empresa" />
+    </form>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
