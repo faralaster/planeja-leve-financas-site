@@ -204,6 +204,16 @@ class MockIntersectionObserver implements IntersectionObserver {
 }
 
 globalThis.IntersectionObserver = MockIntersectionObserver as unknown as typeof IntersectionObserver
+
+// Radix's Checkbox (useSize) requires ResizeObserver, which jsdom does not implement either —
+// surfaces later, in Task 9's EmailCapture test, once a real Checkbox is rendered.
+class MockResizeObserver implements ResizeObserver {
+  observe() {}
+  unobserve() {}
+  disconnect() {}
+}
+
+globalThis.ResizeObserver = MockResizeObserver as unknown as typeof ResizeObserver
 ```
 
 - [ ] **Step 9: Write `src/index.css` with the exact current palette as Tailwind v4 tokens**
