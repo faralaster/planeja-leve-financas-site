@@ -717,7 +717,7 @@ import userEvent from "@testing-library/user-event"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "./accordion"
 
 describe("Accordion", () => {
-  it("reveals the answer text only after its question is clicked", async () => {
+  it("marks the trigger expanded and reveals the answer only after its question is clicked", async () => {
     const user = userEvent.setup()
     render(
       <Accordion type="single" collapsible>
@@ -727,12 +727,16 @@ describe("Accordion", () => {
         </AccordionItem>
       </Accordion>
     )
-    expect(screen.queryByText(/acesso imediato/i)).not.toBeVisible()
-    await user.click(screen.getByRole("button", { name: /recebo na hora\?/i }))
-    expect(screen.getByText(/acesso imediato/i)).toBeVisible()
+    const trigger = screen.getByRole("button", { name: /recebo na hora\?/i })
+    expect(trigger).toHaveAttribute("aria-expanded", "false")
+    await user.click(trigger)
+    expect(trigger).toHaveAttribute("aria-expanded", "true")
+    expect(screen.getByText(/acesso imediato/i)).toBeInTheDocument()
   })
 })
 ```
+
+Note: `toBeVisible()` can't be used here — the closed/open visual state is driven purely by a CSS keyframe animation (`animate-accordion-up`/`-down`), which jsdom doesn't execute, so it would report the content as visible even when closed. `aria-expanded` is the real, DOM-testable signal Radix maintains regardless of CSS.
 
 - [ ] **Step 12: Run it to verify it fails**
 
@@ -1632,8 +1636,11 @@ describe("FAQ", () => {
     expect(screen.getByRole("button", { name: /recebo na hora\?/i })).toBeInTheDocument()
     expect(screen.getByRole("button", { name: /e se eu não gostar\?/i })).toBeInTheDocument()
 
-    await user.click(screen.getByRole("button", { name: /recebo na hora\?/i }))
-    expect(screen.getByText(/acesso imediato após a confirmação do pagamento/i)).toBeVisible()
+    const trigger = screen.getByRole("button", { name: /recebo na hora\?/i })
+    expect(trigger).toHaveAttribute("aria-expanded", "false")
+    await user.click(trigger)
+    expect(trigger).toHaveAttribute("aria-expanded", "true")
+    expect(screen.getByText(/acesso imediato após a confirmação do pagamento/i)).toBeInTheDocument()
   })
 })
 ```
