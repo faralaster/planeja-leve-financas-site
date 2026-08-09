@@ -186,8 +186,24 @@ export default defineConfig({
 
 - [ ] **Step 8: Write `src/test/setup.ts`**
 
+Includes an `IntersectionObserver` mock: `motion`'s `whileInView` (used by the `Reveal`/`StaggerList` primitives in Task 2, and by nearly every section from Task 4 onward) requires it, and jsdom does not implement it — omitting this makes every test for a section using those primitives crash with `ReferenceError: IntersectionObserver is not defined`.
+
 ```ts
 import "@testing-library/jest-dom/vitest"
+
+class MockIntersectionObserver implements IntersectionObserver {
+  readonly root: Element | Document | null = null
+  readonly rootMargin: string = ""
+  readonly thresholds: ReadonlyArray<number> = []
+  observe() {}
+  unobserve() {}
+  disconnect() {}
+  takeRecords(): IntersectionObserverEntry[] {
+    return []
+  }
+}
+
+globalThis.IntersectionObserver = MockIntersectionObserver as unknown as typeof IntersectionObserver
 ```
 
 - [ ] **Step 9: Write `src/index.css` with the exact current palette as Tailwind v4 tokens**
