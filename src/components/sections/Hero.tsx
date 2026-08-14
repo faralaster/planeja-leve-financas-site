@@ -1,6 +1,5 @@
 import { motion } from "motion/react"
 import { Container } from "@/components/Container"
-import { ImagePlaceholder } from "@/components/ImagePlaceholder"
 import { Button } from "@/components/ui/button"
 import { NeumorphEyebrow } from "@/components/ui/neumorph-eyebrow"
 
@@ -24,7 +23,23 @@ export function Hero() {
             <a href="#oferta">Quero organizar minhas finanças</a>
           </Button>
         </motion.div>
-        <ImagePlaceholder label="Capa do Diário Financeiro Kakeibo" />
+        <motion.figure
+          initial={{ opacity: 0, scale: 0.96 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
+          className="overflow-hidden rounded-[2rem] border border-line bg-white/60 p-2 shadow-[0_24px_70px_rgb(23_60_53_/_0.16)]"
+        >
+          <img
+            src="/images/diario-kakeibo-celular.jpg"
+            alt="Diário Financeiro Kakeibo acompanhado de um registro financeiro no celular"
+            width={1280}
+            height={856}
+            loading="eager"
+            decoding="async"
+            sizes="(min-width: 768px) 42vw, calc(100vw - 48px)"
+            className="h-auto w-full rounded-[1.55rem] object-cover"
+          />
+        </motion.figure>
       </Container>
     </section>
   )

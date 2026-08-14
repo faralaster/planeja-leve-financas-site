@@ -13,5 +13,8 @@ describe("Hero", () => {
       "href",
       "#oferta"
     )
+    expect(
+      screen.getByRole("img", { name: /diário financeiro kakeibo acompanhado/i })
+    ).toHaveAttribute("src", "/images/diario-kakeibo-celular.jpg")
   })
 })
