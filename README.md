@@ -26,7 +26,5 @@ Netlify roda `npm run build` e publica `dist/` (ver `netlify.toml`).
 
 ## Pendências conhecidas
 
-- Imagens reais do produto (capa do Diário + 2 bônus + páginas internas) — hoje
-  são placeholders (`ImagePlaceholder`).
 - Link de checkout do Kirvano — os botões de compra (`#cta-oferta`, `#cta-final`)
   estão com `href="#"` e um comentário `TODO: link Kirvano`.

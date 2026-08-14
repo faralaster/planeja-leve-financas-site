@@ -1,5 +1,4 @@
 import { Container } from "@/components/Container"
-import { ImagePlaceholder } from "@/components/ImagePlaceholder"
 import { Reveal } from "@/components/Reveal"
 import { NeumorphEyebrow } from "@/components/ui/neumorph-eyebrow"
 
@@ -19,10 +18,19 @@ export function Solution() {
             informação, no seu tempo.
           </p>
         </Reveal>
-        <Reveal className="grid grid-cols-3 gap-3">
-          <ImagePlaceholder label="Página 1 do Diário" />
-          <ImagePlaceholder label="Página 2 do Diário" />
-          <ImagePlaceholder label="Página 3 do Diário" />
+        <Reveal className="flex justify-center">
+          <figure className="w-full max-w-[380px] overflow-hidden rounded-[2rem] border border-line bg-white/60 p-2 shadow-[0_20px_60px_rgb(23_60_53_/_0.14)]">
+            <img
+              src="/images/capa-diario-financeiro-kakeibo.jpg"
+              alt="Capa do Diário Financeiro Kakeibo"
+              width={922}
+              height={1280}
+              loading="lazy"
+              decoding="async"
+              sizes="(min-width: 768px) 380px, calc(100vw - 48px)"
+              className="h-auto w-full rounded-[1.55rem] object-cover"
+            />
+          </figure>
         </Reveal>
       </Container>
     </section>
